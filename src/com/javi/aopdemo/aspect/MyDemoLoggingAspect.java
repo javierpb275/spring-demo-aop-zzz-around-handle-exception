@@ -39,6 +39,7 @@ public class MyDemoLoggingAspect {
 		// execute method
 		Object result = null;
 		
+		//we are handling the exception here in our advice:
 		try {
 			result = theProceedingJoinPoint.proceed();//theProceedingJoinPonit: Handle to target method. .proceed(): execute the target method
 		} catch (Exception e) {

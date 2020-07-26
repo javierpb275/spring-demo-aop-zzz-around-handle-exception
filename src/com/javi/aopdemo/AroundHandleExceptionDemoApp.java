@@ -28,8 +28,10 @@ public class AroundHandleExceptionDemoApp {
 		
 		myLogger.info("Calling getFortune");
 		
+		//----The Main App will never know about the exception because it's being handle in our @Around advice
 		boolean tripWire = true;
 		String data = theFortuneService.getFortune(tripWire);//this will throw an exception because tripWire = true
+		//------------
 		
 		myLogger.info("\nMy fortune is: " + data);
 			
